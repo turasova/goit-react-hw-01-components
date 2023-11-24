@@ -1,0 +1,35 @@
+.item {
+    border: 1px solid gray;
+    border-radius: 15px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+} 
+.status{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+
+.avatar{
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 20px 20px;
+    background-color: beige;
+}
+.name {
+    font-size: 22px;
+    font-weight: 700;
+}
