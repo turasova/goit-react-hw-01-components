@@ -1,16 +1,11 @@
-import data from '../../json/data.json';
 import css from './Statistics.module.css';
 
-  
-// <Statistics stats={data} />
 
-
-
-export const Statistics = () => {
+export const Statistics = ({title, stats}) => {
   return <section className={css.statistics} >
-        <h2 className={css.title}>Upload stats</h2>
+    {title && <h2 className={css.title}>{title}</h2>}
      <ul className={css.list}> 
-      {data.map(({ id, label, percentage }) => ( 
+      {stats.map(({ id, label, percentage }) => ( 
           <li className={css.item} key={id}>
             <span className={css.label}>{label}</span>
             <span className={css.percentage}>{percentage}%</span>
@@ -19,12 +14,3 @@ export const Statistics = () => {
     </ul>     
      </section>
 }
-
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215)
-//     .toString(16)
-//     .padStart(6, 0)}`;
-// }
-
-// const color = getRandomHexColor();
-//<Statistics title="Upload stats" stats={data} />
